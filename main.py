@@ -1,4 +1,5 @@
 import sys
+import time
 
 
 def componentesDelGrafo(arr):
@@ -33,16 +34,29 @@ def componentesDelGrafo(arr):
 
 if __name__ == '__main__':
     
-    lec = input().split('\n')
+    start = time.time()
     
+    lec= sys.stdin.read().split('\n')
+    
+    # lec = input().split('\n')
+    cont = 0 
     nCasos = int(lec[0])
-    print("numero de casos: ", nCasos)
+    #print("numero de casos: ", nCasos)
     for i in range(1, nCasos + 1):
         casoStr = lec[i].split(" ")
         caso = [int(i) for i in casoStr] #Convertimos los strings del arreglo en enteros
         #print(caso)
-        print(componentesDelGrafo(caso))
+        #print(componentesDelGrafo(caso))
+        sys.stdout.write(str(componentesDelGrafo(caso)))
+        sys.stdout.write("\n")
+        cont+=1
+    #print("ejecuciones: ",cont)
+    end = time.time()
     
+    #print("TIME: ",end-start)
+    final = str(end-start)
+    sys.stdout.write(str("TIME: "+final))
+
     # # Cómo vrg se leen varias líneas en Python? aaaaaaaaaaaaa
     # Creo que yo sé B) 
     #
