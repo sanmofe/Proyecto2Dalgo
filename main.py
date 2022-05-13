@@ -1,3 +1,5 @@
+"Autores: Santiago Mora y Sergio Guillen"
+
 import sys
 import time
 
