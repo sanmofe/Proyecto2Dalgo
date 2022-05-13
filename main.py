@@ -22,7 +22,7 @@ def componentesDelGrafo(arr):
     if maxIzq > minDer:
         return 1
     else:
-        return componentesDelGrafo(arrIzq) + componentesDelGrafo(arrDer)
+        return componentesDelGrafo(arrIzq) + 1
 
 
 # a= [3,2,1,6,5,4]
